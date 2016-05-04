@@ -1,0 +1,17 @@
+{
+  "extensions":
+    [
+      {
+        "ext":  "properties",
+        "path": "/home/fredericoallan/Projetos/cashlink/cashlink_service/src/main/resources/i18n",
+        "files": [],
+        "regex":  {
+                    "exp": [
+                            "=(.*)"
+                           ],
+                    "group": 1
+                  }
+      }
+    ],
+  "dictionaryFile": "/home/fredericoallan/temp/box-spell-checker/dicionario_pt_BR.json"
+}
