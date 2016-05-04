@@ -1,10 +1,14 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'distribution'
+
+
 repositories {
-	maven {
-		jcenter()
-	}
-}
+         jcenter()
+    }
+
+mainClassName = 'br.com.softbox.boxspellchecker.SpellChecker'
 
 dependencies {
 	compile (group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.7.3')

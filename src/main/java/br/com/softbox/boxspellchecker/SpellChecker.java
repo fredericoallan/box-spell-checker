@@ -22,7 +22,6 @@ import br.com.softbox.utils.MatchFilesRegex;
 import br.com.softbox.utils.MatchWordsRegex;
 
 public class SpellChecker {
-	
 	//arquivos de configuração
 	static String config = "./config.json";
 	
@@ -93,6 +92,7 @@ public class SpellChecker {
 		
 		//1) ler o arquivo json de configuração em uma variavel transformando em um obj mapper da classe Extensions
 		ObjectMapper mapperConfig = new ObjectMapper();
+		
 		Extensions ext = mapperConfig.readValue(new File(config), Extensions.class);
 		
 		//2) ler o arquivo json de configuração em uma variavel transformando em um obj mapper da classe Extensions
