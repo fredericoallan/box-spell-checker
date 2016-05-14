@@ -27,6 +27,7 @@ public class MatchWordsRegex {
 			
 			//replace m por caracteres especiais mantendo acentos pré\requisitos
 		    palavra = palavra.replaceAll("[^\\p{L}\\p{Nd}-]+", "").trim();
+		    
 		    //converter caracteres html em palavra por caracteres normais
 		    //palavra  = Parser.unescapeEntities(palavra, false);
 			

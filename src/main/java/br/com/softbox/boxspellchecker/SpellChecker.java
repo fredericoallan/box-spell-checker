@@ -17,6 +17,7 @@ import br.com.softbox.boxspellchecker.beans.Extension;
 import br.com.softbox.boxspellchecker.beans.Extensions;
 import br.com.softbox.boxspellchecker.beans.Dictionary;
 import br.com.softbox.utils.ReadDirFiles;
+import br.com.softbox.utils.Utils;
 import br.com.softbox.webcrawler.WebCrawler;
 import br.com.softbox.utils.MatchFilesRegex;
 import br.com.softbox.utils.MatchWordsRegex;
@@ -36,6 +37,7 @@ public class SpellChecker {
 	static MatchFilesRegex matchFilesRegex = new MatchFilesRegex();
 	static MatchWordsRegex matchWordsRegex = new MatchWordsRegex();
 	static WebCrawler webCrawler = new WebCrawler();
+	static Utils util = new Utils();
 	
 	//recebe o retorno da lista de frases encontradas dentro de um arquivo específico
 	static Map<Integer,String> frasesLista = new HashMap<Integer,String>();
@@ -84,7 +86,7 @@ public class SpellChecker {
 			System.out.println("======================================================");
 			System.out.println("Em breve web box spell checker!...");
 			//webCrawler.crawl(args[0].toString());
-			//webCrawler.crawl("https://mantis.softbox.com.br/my_view_page.php");
+			//webCrawler.crawl("https://mantis.com/my_view_page.php");
 			System.out.println("======================================================");
 			System.exit(0);
 		}
@@ -136,13 +138,19 @@ public class SpellChecker {
 					// e retornar quais palavras dao match e quais nao dao				
 					for(Map.Entry<Integer, String> lista: frasesLista.entrySet()) {
 							
+						//fazer o replace de caracteres que podem separar palavras na frase e estes virar espaço " "
+						String frase = lista.getValue();
+						frase = frase.replaceAll("[\\|\\/|:]+", " ").trim();
 						//fazer o split das frases
-						String[] words = lista.getValue().split("\\s+");
+						String[] words = frase.split("\\s+");
 						
 						for (int z = 0; z < words.length; z++){
 						
 							//jogar palavra por palavra no metodo matchWordRegex
 							String palavra = words[z].trim();
+							//replace latin caracteres
+							palavra = util.replaceLatin(palavra);
+							
 							palavrasLista.putAll(matchWordsRegex.listWords(palavra, dic.getDicionario(), e.getRegex().getGroup()));
 						}
 						
