@@ -2,6 +2,17 @@
 
 Box Speel Checker é uma ferramenta feita em java para verificar a correta grafia em qualquer tipo de arquivo. Ela utiliza arquivos de configuração para determinar que diretórios e extensões de arquivos devem ser validados usando [regex].
 
+
+## Arquivos necessários
+
+<b>Para um teste rápido, faça download:</b>
+- box-spell-checker.jar
+- config.json
+- dicionario_pt_BR.json
+
+Após isso, leia a sessão de execução no final deste readme
+
+
 ## Pré-requisitos
 
 ```
@@ -58,6 +69,8 @@ A propriedade 'regex' contém a expressão regular para captura de frases, ou co
  "DictionaryFile":"./dictionary/dictionary.json"
   }
 ```
+
+<b>OBS: cuidados com os 'escapes' nas expressões regulares, dentro deste arquivo, pois serão utilizadas duas barras "\\" para que a ferramenta interprete a string de regex corretamente</b>
 
 ## Dicionário
 
