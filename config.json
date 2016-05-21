@@ -3,8 +3,8 @@
     [
       {
         "ext":  "properties",
-        "path": "/home/fredericoallan/Projetos/cashlink/cashlink_service/src/main/resources/i18n",
-        "files": [],
+        "path": "/home/fredericoallan/Projetos/meuprojeto/meuprojeto_service/src/main/resources/i18n",
+        "files": ["mensagens_pt_BR.properties"],
         "regex":  {
                     "exp": [
                             "=(.*)"

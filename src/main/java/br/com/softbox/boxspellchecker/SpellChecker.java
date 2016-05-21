@@ -2,6 +2,7 @@ package br.com.softbox.boxspellchecker;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -147,7 +148,7 @@ public class SpellChecker {
 						for (int z = 0; z < words.length; z++){
 						
 							//jogar palavra por palavra no metodo matchWordRegex
-							String palavra = words[z].trim();
+							String palavra = new String(words[z].trim().getBytes("UTF-8"));
 							//replace latin caracteres
 							palavra = util.replaceLatin(palavra);
 							
