@@ -66,10 +66,14 @@ public class MatchFilesRegex {
 			 		        // Use CharacterIterator.substring(offset, end);
 			 		        
 			 		        //caso a frase não tenha nada
-			 		        if (frase.trim().length() == 0){
-			 		        	listaFrases.put(i, "config regex/group returns a empty frase");
+			 		        if (frase == null ){
+			 		        	listaFrases.put(i, "Error!");
 			 		        }else{
-			 		        	listaFrases.put(i, frase);
+			 		        	if (frase.trim().length() == 0){
+			 		        		listaFrases.put(i, "Error!");
+			 		        	}else{
+			 		        		listaFrases.put(i, frase);
+			 		        	}
 			 		        }
 			 		      }
 	 				}

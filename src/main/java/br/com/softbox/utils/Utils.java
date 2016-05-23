@@ -1,5 +1,7 @@
 package br.com.softbox.utils;
 
+import javax.swing.text.html.parser.Parser;
+
 public class Utils {
 
 	public static void main(String[] args) {
@@ -98,4 +100,8 @@ public class Utils {
     
     return strOutput;
 	}
+ 	
+ 	public boolean isNumeric(String s) {  
+ 	    return s.matches("[-+]?\\d*\\.?\\d+");  
+ 	}  
 }
