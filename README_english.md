@@ -8,6 +8,15 @@ Box Speel Checker is a java tool to check the spelling in html files, java, php 
 java version 1.8.0
 ```
 
+## Necessary files
+
+<b>For a quick test, download:</b>
+- box-spell-checker.jar
+- config.json
+- dicionario_pt_BR.json (change or create one for your language)
+
+After that read the 'Execution' topic at the end of this readme
+
 ## Installation
 
 Ensure that the java are installed on the machine/server. v
