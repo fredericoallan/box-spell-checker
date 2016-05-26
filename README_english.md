@@ -67,6 +67,8 @@ The property 'regex' contains the expression for capture phrases inside the file
   }
 ```
 
+OBS: care of the 'scapes' in regular expressions in this file, it will use two slashes "\" for the tool to interpret the regex string correctly
+
 ## Dictionary
 
 This file contains all known words and with the correct spelling in the system, validation, must possess.
